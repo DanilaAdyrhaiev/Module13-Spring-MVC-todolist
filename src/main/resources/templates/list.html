@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="main">
+    <h1>Note List</h1>
+    <form th:action="@{/note/add}" method="get">
+    <button>Додати нотатку</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Action</th>
+        </tr>
+
+        <tr th:each="note : ${notes}">
+            <td class="first-td" th:text="${note.title}"></td>
+            <td class="second-td" th:text="${note.content}"></td>
+            <td class="third-td">
+                <form class="edit-form" th:action="@{'/note/edit/' + ${note.id}}" method="get">
+                    <button>Edit</button>
+                </form>
+                <form class="delete-form" th:action="@{/note/delete(id=${note.id})}" method="post">
+                    <button>Delete</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

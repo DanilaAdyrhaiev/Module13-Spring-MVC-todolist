@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.main {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #e3e3e3;
+}
+h2{
+    text-align: center;
+}
+table{
+    margin: 0 auto;
+}
+
+.edit-form,
+.delete-form {
+    display: inline-block;
+    width: 60px;
+}
+
+.first-td{
+    min-width: 75px;
+    max-width: 100px;
+    align-items: center;
+}
+.second-td{
+    min-width: 100px;
+    max-width: 300px;
+    align-items: center;
+}
+.third-td{
+    width: 140px;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Выравнивание по центру по горизонтали (если необходимо) */
+    align-items: center;
+}
